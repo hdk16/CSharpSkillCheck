@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProblemTwo_CompilationError
 {
-    class Employee
+    public class Employee
     {
         public int EmpID { get; set; }
         public string EmpName { get; set; }
         public int EmpLevel { get; set; }
-        private int NoOfLeaves { get; }
+        public int NoOfLeaves { get; set; }
         public DateTime DateOfJoining { get; set; }
 
         public Employee()
@@ -21,7 +21,10 @@ namespace ProblemTwo_CompilationError
         }
         public Employee(int eID,string eName,int eLevel, DateTime eDoJ)
         {
-
+            this.EmpID = eID;
+            this.EmpName = eName;
+            this.EmpLevel = eLevel;
+            this.DateOfJoining = eDoJ;
         }
 
         public static int GetMonthDifference(DateTime startDate, DateTime endDate)
